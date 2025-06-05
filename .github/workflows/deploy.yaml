@@ -1,0 +1,10 @@
+name: deploy
+
+on: push
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              run: echo ${{ secrets.SECRET }}
