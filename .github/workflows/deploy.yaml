@@ -8,3 +8,6 @@ jobs:
         steps:
             - name: Checkout code
               run: echo ${{ secrets.SECRET }}
+
+            - name: setup
+              uses: actions/setup-node@v4
