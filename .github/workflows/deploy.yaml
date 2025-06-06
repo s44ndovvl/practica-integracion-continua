@@ -27,6 +27,11 @@ jobs:
             - name: Run tests
               run: npm test
 
+            - name: upload-artifact
+              uses: actions/upload-artifact@v3
+              with:
+                path: public/
+
     deploy:
         if: ${{ always()}}
         runs-on: ubuntu-latest
