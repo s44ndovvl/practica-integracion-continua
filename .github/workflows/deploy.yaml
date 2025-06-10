@@ -25,7 +25,10 @@ jobs:
               run: npm install
 
             - name: Run tests
-              run: npm test
+              run: npm run test
+              
+            - name: Build project
+              run: npm run build
 
             - name: upload-artifact
               uses: actions/upload-artifact@v3
@@ -40,6 +43,7 @@ jobs:
         steps:
 
             - name: Deploy to production
+              id: deploy
               run: echo "Deploying to production server..."
 
             
